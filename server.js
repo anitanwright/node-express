@@ -1,10 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 
-const campsiteRouter = require('./routes/campsiteRouter'); //route path for campsiteRouter
+//route path for campsiteRouter
+const campsiteRouter = require('./routes/campsiteRouter'); 
+//route path for partnerRouter
 const partnerRouter = require('./routes/partnerRouter');
-
-const promotionRouter = require('./routes/promotionRouter'); //route path for promotionRouter
+//route path for promotionRouter
+const promotionRouter = require('./routes/promotionRouter'); 
 
 const hostname = 'localhost';
 const port = 3000;
