@@ -1,4 +1,7 @@
-// single statement that handles all the routes to campsite endpoints
+const express = require('express');
+const promotionRouter = express.Router();
+
+// single statement that handles all the routes to promotion endpoints
 
 promotionRouter.route('/')
 .all((req, res, next) => {
@@ -20,7 +23,7 @@ promotionRouter.route('/')
     res.end('Deleting all promotions');
 })
 
-//single statement with endpoints for specific campsites with campsiteID params
+//single statement with endpoints for specific promotions with promotionID params
 
 promotionRouter.route('/promotions/:promotionId')
 .all((req, res, next) => {
