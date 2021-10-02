@@ -16,7 +16,7 @@ partnerRouter.route('/')
 })
 .put((req, res) => {
     res.statusCode = 403;
-    res.end('PUT operation not supported on /campsites');
+    res.end(`POST operation not supported on /partners/${req.params.partnerId}`);
 })
 .delete((req, res) => {
     res.end('Deleting all partners');
@@ -31,17 +31,17 @@ partnerRouter.route('/:partnerId')
     next();
 })
 .get((req, res) => {
-    res.end('Will send all the partners to you');
+    res.end(`Will send the details of the partner: ${req.params.partnerId} to you`);
 })
 .post((req, res) => { 
     res.end(`Will add the partner: ${req.body.name} with description: ${req.body.description}`);
 })
 .put((req, res) => { 
     res.statusCode = 403;
-    res.end('PUT operation not supported on /campsites');
+    res.end(`POST operation not supported on /partners/${req.params.partnerId}`);
 })
 .delete((req, res) => {
-    res.end('Deleting all partners');
+    res.end(`Deleting partner: ${req.params.partnerId}`);
 });
 
 
